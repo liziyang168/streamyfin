@@ -12,6 +12,9 @@
     "login_button": "Zaloguj się",
     "quick_connect": "Szybkie połączenie",
     "enter_code_to_login": "Wpisz kod {{code}}, aby się zalogować",
+    "quick_connect_instructions": "Enter this code on a signed-in device — you'll be logged in automatically.",
+    "tap_code_to_copy": "Tap the code to copy it",
+    "code_copied": "Code copied",
     "failed_to_initiate_quick_connect": "Nie udało się zainicjować szybkiego połączenia",
     "got_it": "Rozumiem",
     "connection_failed": "Połączenie nieudane",
@@ -33,6 +36,7 @@
     "connect_button": "Połącz",
     "previous_servers": "Poprzednie serwery",
     "clear_button": "Wyczyść",
+    "server_url": "Server URL",
     "swipe_to_remove": "Przesuń, by usunąć",
     "search_for_local_servers": "Wyszukaj lokalne serwery",
     "searching": "Wyszukiwanie...",
@@ -56,6 +60,7 @@
   "save_account": {
     "title": "Zapisz konto",
     "save_for_later": "Zapisz to konto",
+    "not_saved": "Account was not saved",
     "security_option": "Opcja zabezpieczeń",
     "no_protection": "Brak ochrony",
     "no_protection_desc": "Szybkie logowanie bez logowania",
@@ -118,6 +123,7 @@
     },
     "settings": {
       "settings_title": "Ustawienia",
+      "disabled_by_admin": "Disabled by admin",
       "log_out_button": "Wyloguj się",
       "switch_user": {
         "title": "Switch User",
@@ -178,7 +184,10 @@
         "network_already_added": "Network already added",
         "no_wifi_connected": "Not connected to WiFi",
         "permission_denied": "Location permission denied",
-        "permission_denied_explanation": "Location permission is required to detect WiFi network for auto-switching. Please enable it in Settings."
+        "permission_denied_explanation": "Location permission is required to detect WiFi network for auto-switching. Please enable it in Settings.",
+        "ssid_hidden": "SSID hidden",
+        "location_off_description": "Connected to Wi-Fi, but the network name is hidden. Enable device Location services and grant the app location permission to detect it.",
+        "open_location_settings": "Open Location settings"
       },
       "user_info": {
         "user_info_title": "Informacje o użytkowniku",
@@ -195,13 +204,21 @@
         "quick_connect_authorized": "Szybkie połączenie autoryzowane",
         "error": "Błąd",
         "invalid_code": "Nieprawidłowy kod",
-        "authorize": "Autoryzuj"
+        "authorize": "Autoryzuj",
+        "paste_code": "Paste code"
       },
       "media_controls": {
         "media_controls_title": "Sterowanie multimediami",
         "forward_skip_length": "Długość przewijania do przodu",
         "rewind_length": "Długość przewijania do tyłu",
         "seconds_unit": "s"
+      },
+      "video_player": {
+        "title": "Video Player",
+        "exoplayer": "ExoPlayer",
+        "mpv": "MPV",
+        "exoplayer_note": "ExoPlayer does not support advanced ASS/SSA subtitle styling or horizontal subtitle alignment. Switch to MPV if you need those.",
+        "mpv_note": "MPV on TV does not currently pass HDR metadata to the display — HDR10/HDR10+ content is tone-mapped to SDR. Switch to ExoPlayer for HDR output."
       },
       "buffer": {
         "title": "Buffer Settings",
@@ -274,6 +291,10 @@
         "mpv_subtitle_margin_y": "Vertical Margin",
         "mpv_subtitle_align_x": "Horizontal Align",
         "mpv_subtitle_align_y": "Vertical Align",
+        "mpv_settings_title": "MPV Subtitle Settings",
+        "mpv_settings_description": "Advanced subtitle customization for MPV player",
+        "opaque_background": "Opaque Background",
+        "background_opacity": "Background Opacity",
         "align": {
           "left": "Left",
           "center": "Center",
@@ -375,6 +396,7 @@
           "toasts": {
             "saved": "Zapisano",
             "refreshed": "Ustawienia odświeżone z serwera",
+            "refresh_failed": "Couldn't refresh settings from server",
             "disabled": "Streamystats wyłączone"
           },
           "refresh_from_server": "Odśwież ustawienia z serwera"
@@ -415,7 +437,9 @@
         "click_for_more_info": "Kliknij po więcej informacji",
         "level": "Poziom",
         "no_logs_available": "Brak dostępnych logów",
-        "delete_all_logs": "Usuń wszystkie logi"
+        "delete_all_logs": "Usuń wszystkie logi",
+        "copy": "Copy",
+        "copied": "Copied to clipboard"
       },
       "languages": {
         "title": "Języki",
@@ -442,10 +466,13 @@
     },
     "sessions": {
       "title": "Sesje",
-      "no_active_sessions": "Brak aktywnych sesji"
+      "no_active_sessions": "Brak aktywnych sesji",
+      "select_session": "Select Session",
+      "now_playing": "Now playing:"
     },
     "downloads": {
       "downloads_title": "Pobrane",
+      "transcoding": "Transcoding",
       "series": "Seriale",
       "movies": "Filmy",
       "other_media": "Inne media",
@@ -501,6 +528,8 @@
     "none": "Nic",
     "track": "Utwór",
     "cancel": "Anuluj",
+    "stop": "Stop",
+    "open_menu": "Open Menu",
     "delete": "Usuń",
     "ok": "OK",
     "remove": "Usuń",
@@ -602,7 +631,35 @@
   },
   "player": {
     "live": "LIVE",
+    "shuffle": "Shuffle",
+    "entire_series": "Entire Series",
+    "episode_count": "{{count}} episodes",
+    "menu": {
+      "quality": "Quality",
+      "subtitles": "Subtitles",
+      "subtitle_scale": "Subtitle Scale",
+      "audio": "Audio",
+      "speed": "Speed",
+      "playback_options": "Playback Options",
+      "show_technical_info": "Show Technical Info",
+      "hide_technical_info": "Hide Technical Info"
+    },
+    "technical_info": {
+      "video": "Video:",
+      "audio": "Audio:",
+      "subtitle": "Subtitle:",
+      "bitrate": "Bitrate:",
+      "source_bitrate": "File:",
+      "buffer_seconds": "Buffer: {{seconds}}s",
+      "vo": "VO:",
+      "dropped_frames": "Dropped: {{count}} frames",
+      "loading": "Loading..."
+    },
     "mpv_player_title": "MPV Player",
+    "aspect_ratio": "Aspect Ratio",
+    "aspect_ratio_original": "Original",
+    "hash_match": "Hash Match",
+    "still_watching": "Are you still watching?",
     "error": "Błąd",
     "failed_to_get_stream_url": "Nie udało się pobrać adresu strumienia",
     "an_error_occurred_while_playing_the_video": "Wystąpił błąd podczas odtwarzania wideo. Sprawdź logi w ustawieniach.",
@@ -702,6 +759,7 @@
     "no_data_available": "No data available"
   },
   "live_tv": {
+    "title": "Live TV",
     "next": "Następny",
     "previous": "Poprzedni",
     "coming_soon": "Już wkrótce",
@@ -773,7 +831,7 @@
     "request_selected": "Request Selected",
     "n_selected": "{{count}} selected",
     "toasts": {
-      "jellyseer_does_not_meet_requirements": "Serwer Jellyseerr nie spełnia minimalnych wymagań wersji! Zaktualizuj go co najmniej do wersji 2.0.0",
+      "jellyseerr_does_not_meet_requirements": "Seerr server does not meet minimum version requirements! Please update to at least 2.0.0",
       "jellyseerr_test_failed": "Test Jellyseerr nie powiódł się. Spróbuj ponownie.",
       "failed_to_test_jellyseerr_server_url": "Nie udało się przetestować adresu URL Jellyseerr",
       "issue_submitted": "Zgłoszenie zostało przesłane!",
@@ -786,6 +844,16 @@
       "failed_to_decline_request": "Niepowodzenie przy Odrzucaniu Prośby"
     }
   },
+  "accessibility": {
+    "play_button": "Play button",
+    "play_hint": "Tap to play the media",
+    "toggle_orientation": "Toggle screen orientation",
+    "toggle_orientation_hint": "Toggles the screen orientation between portrait and landscape"
+  },
+  "not_found": {
+    "title": "This screen doesn't exist.",
+    "go_home": "Go to home screen!"
+  },
   "tabs": {
     "home": "Strona główna",
     "search": "Szukaj",
@@ -796,6 +864,12 @@
   },
   "music": {
     "title": "Muzyka",
+    "no_track_playing": "No track playing",
+    "queue_empty": "Queue is empty",
+    "playing_from_queue": "Playing from queue",
+    "up_next": "Up next",
+    "now_playing": "Now Playing",
+    "missing_library_id": "Missing music library id.",
     "tabs": {
       "suggestions": "Sugestie",
       "albums": "Albumy",

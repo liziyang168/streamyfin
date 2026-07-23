@@ -12,6 +12,9 @@
     "login_button": "Anmelden",
     "quick_connect": "Quick Connect",
     "enter_code_to_login": "Gib den Code {{code}} ein, um dich anzumelden",
+    "quick_connect_instructions": "Enter this code on a signed-in device — you'll be logged in automatically.",
+    "tap_code_to_copy": "Tap the code to copy it",
+    "code_copied": "Code copied",
     "failed_to_initiate_quick_connect": "Fehler beim Initiieren der Schnellverbindung",
     "got_it": "Verstanden",
     "connection_failed": "Verbindung fehlgeschlagen",
@@ -33,6 +36,7 @@
     "connect_button": "Verbinden",
     "previous_servers": "Vorherige Server",
     "clear_button": "Löschen",
+    "server_url": "Server URL",
     "swipe_to_remove": "Wischen, um zu entfernen",
     "search_for_local_servers": "Nach lokalen Servern suchen",
     "searching": "Suche...",
@@ -56,6 +60,7 @@
   "save_account": {
     "title": "Konto speichern",
     "save_for_later": "Dieses Konto speichern",
+    "not_saved": "Account was not saved",
     "security_option": "Sicherheitseinstellung",
     "no_protection": "Keine",
     "no_protection_desc": "Schnellanmeldung ohne Authentifizierung",
@@ -118,6 +123,7 @@
     },
     "settings": {
       "settings_title": "Einstellungen",
+      "disabled_by_admin": "Disabled by admin",
       "log_out_button": "Abmelden",
       "switch_user": {
         "title": "Benutzer wechseln",
@@ -178,7 +184,10 @@
         "network_already_added": "Netzwerk bereits hinzugefügt",
         "no_wifi_connected": "Nicht mit WLAN verbunden",
         "permission_denied": "Standortberechtigung nicht verfügbar",
-        "permission_denied_explanation": "Standortberechtigung ist nötig, um WLAN-Netze für den automatischen Wechsel zu erkennen. Bitte in den Einstellungen aktivieren."
+        "permission_denied_explanation": "Standortberechtigung ist nötig, um WLAN-Netze für den automatischen Wechsel zu erkennen. Bitte in den Einstellungen aktivieren.",
+        "ssid_hidden": "SSID hidden",
+        "location_off_description": "Connected to Wi-Fi, but the network name is hidden. Enable device Location services and grant the app location permission to detect it.",
+        "open_location_settings": "Open Location settings"
       },
       "user_info": {
         "user_info_title": "Benutzerinformationen",
@@ -195,13 +204,21 @@
         "quick_connect_authorized": "Quick Connect autorisiert",
         "error": "Fehler",
         "invalid_code": "Ungültiger Code",
-        "authorize": "Autorisieren"
+        "authorize": "Autorisieren",
+        "paste_code": "Paste code"
       },
       "media_controls": {
         "media_controls_title": "Mediensteuerung",
         "forward_skip_length": "Vorspullänge",
         "rewind_length": "Rückspullänge",
         "seconds_unit": "s"
+      },
+      "video_player": {
+        "title": "Video Player",
+        "exoplayer": "ExoPlayer",
+        "mpv": "MPV",
+        "exoplayer_note": "ExoPlayer does not support advanced ASS/SSA subtitle styling or horizontal subtitle alignment. Switch to MPV if you need those.",
+        "mpv_note": "MPV on TV does not currently pass HDR metadata to the display — HDR10/HDR10+ content is tone-mapped to SDR. Switch to ExoPlayer for HDR output."
       },
       "buffer": {
         "title": "Puffer-Einstellungen",
@@ -274,6 +291,10 @@
         "mpv_subtitle_margin_y": "Vertikaler Abstand",
         "mpv_subtitle_align_x": "Horizontale Ausrichtung",
         "mpv_subtitle_align_y": "Vertikale Ausrichtung",
+        "mpv_settings_title": "MPV Subtitle Settings",
+        "mpv_settings_description": "Advanced subtitle customization for MPV player",
+        "opaque_background": "Opaque Background",
+        "background_opacity": "Background Opacity",
         "align": {
           "left": "Links",
           "center": "Mittig",
@@ -375,6 +396,7 @@
           "toasts": {
             "saved": "Gespeichert",
             "refreshed": "Einstellungen vom Server aktualisiert",
+            "refresh_failed": "Couldn't refresh settings from server",
             "disabled": "Streamystats deaktiviert"
           },
           "refresh_from_server": "Einstellungen vom Server aktualisieren"
@@ -415,7 +437,9 @@
         "click_for_more_info": "Für mehr Informationen klicken",
         "level": "Stufe",
         "no_logs_available": "Keine Logs verfügbar",
-        "delete_all_logs": "Alle Logs löschen"
+        "delete_all_logs": "Alle Logs löschen",
+        "copy": "Copy",
+        "copied": "Copied to clipboard"
       },
       "languages": {
         "title": "Sprachen",
@@ -442,10 +466,13 @@
     },
     "sessions": {
       "title": "Sitzungen",
-      "no_active_sessions": "Keine aktiven Sitzungen"
+      "no_active_sessions": "Keine aktiven Sitzungen",
+      "select_session": "Select Session",
+      "now_playing": "Now playing:"
     },
     "downloads": {
       "downloads_title": "Downloads",
+      "transcoding": "Transcoding",
       "series": "Serien",
       "movies": "Filme",
       "other_media": "Andere Medien",
@@ -501,6 +528,8 @@
     "none": "Keine",
     "track": "Spur",
     "cancel": "Abbrechen",
+    "stop": "Stop",
+    "open_menu": "Open Menu",
     "delete": "Löschen",
     "ok": "OK",
     "remove": "Entfernen",
@@ -602,7 +631,35 @@
   },
   "player": {
     "live": "LIVE",
+    "shuffle": "Shuffle",
+    "entire_series": "Entire Series",
+    "episode_count": "{{count}} episodes",
+    "menu": {
+      "quality": "Quality",
+      "subtitles": "Subtitles",
+      "subtitle_scale": "Subtitle Scale",
+      "audio": "Audio",
+      "speed": "Speed",
+      "playback_options": "Playback Options",
+      "show_technical_info": "Show Technical Info",
+      "hide_technical_info": "Hide Technical Info"
+    },
+    "technical_info": {
+      "video": "Video:",
+      "audio": "Audio:",
+      "subtitle": "Subtitle:",
+      "bitrate": "Bitrate:",
+      "source_bitrate": "File:",
+      "buffer_seconds": "Buffer: {{seconds}}s",
+      "vo": "VO:",
+      "dropped_frames": "Dropped: {{count}} frames",
+      "loading": "Loading..."
+    },
     "mpv_player_title": "MPV-Player",
+    "aspect_ratio": "Aspect Ratio",
+    "aspect_ratio_original": "Original",
+    "hash_match": "Hash Match",
+    "still_watching": "Are you still watching?",
     "error": "Fehler",
     "failed_to_get_stream_url": "Fehler beim Abrufen der Stream-URL",
     "an_error_occurred_while_playing_the_video": "Ein Fehler ist beim Abspielen des Videos aufgetreten. Logs in den Einstellungen überprüfen.",
@@ -702,6 +759,7 @@
     "no_data_available": "Keine Daten verfügbar"
   },
   "live_tv": {
+    "title": "Live TV",
     "next": "Nächste",
     "previous": "Vorherige",
     "coming_soon": "Demnächst",
@@ -773,7 +831,7 @@
     "request_selected": "Auswahl anfragen",
     "n_selected": "{{count}} ausgewählt",
     "toasts": {
-      "jellyseer_does_not_meet_requirements": "Seerr-Server erfüllt nicht die minimalen Versionsanforderungen. Bitte den Seerr-Server auf mindestens 2.0.0 aktualisieren.",
+      "jellyseerr_does_not_meet_requirements": "Seerr server does not meet minimum version requirements! Please update to at least 2.0.0",
       "jellyseerr_test_failed": "Seerr-Test fehlgeschlagen. Bitte erneut versuchen.",
       "failed_to_test_jellyseerr_server_url": "Fehler beim Test der Seerr-Server-URL",
       "issue_submitted": "Problem eingereicht!",
@@ -786,6 +844,16 @@
       "failed_to_decline_request": "Fehler beim Ablehnen der Anfrage"
     }
   },
+  "accessibility": {
+    "play_button": "Play button",
+    "play_hint": "Tap to play the media",
+    "toggle_orientation": "Toggle screen orientation",
+    "toggle_orientation_hint": "Toggles the screen orientation between portrait and landscape"
+  },
+  "not_found": {
+    "title": "This screen doesn't exist.",
+    "go_home": "Go to home screen!"
+  },
   "tabs": {
     "home": "Startseite",
     "search": "Suche",
@@ -796,6 +864,12 @@
   },
   "music": {
     "title": "Musik",
+    "no_track_playing": "No track playing",
+    "queue_empty": "Queue is empty",
+    "playing_from_queue": "Playing from queue",
+    "up_next": "Up next",
+    "now_playing": "Now Playing",
+    "missing_library_id": "Missing music library id.",
     "tabs": {
       "suggestions": "Vorschläge",
       "albums": "Alben",

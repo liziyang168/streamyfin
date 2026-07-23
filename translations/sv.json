@@ -12,6 +12,9 @@
     "login_button": "Logga in",
     "quick_connect": "Snabbanslutning",
     "enter_code_to_login": "Ange koden {{code}} för att logga in",
+    "quick_connect_instructions": "Enter this code on a signed-in device — you'll be logged in automatically.",
+    "tap_code_to_copy": "Tap the code to copy it",
+    "code_copied": "Code copied",
     "failed_to_initiate_quick_connect": "Snabbanslutning misslyckades",
     "got_it": "Koden har mottagits",
     "connection_failed": "Anslutningen Misslyckades",
@@ -33,6 +36,7 @@
     "connect_button": "Anslut",
     "previous_servers": "Tidigare Servrar",
     "clear_button": "Rensa allt",
+    "server_url": "Server URL",
     "swipe_to_remove": "Svep för att ta bort",
     "search_for_local_servers": "Sök Efter Lokala Servrar",
     "searching": "Söker...",
@@ -56,6 +60,7 @@
   "save_account": {
     "title": "Spara konto",
     "save_for_later": "Spara detta konto",
+    "not_saved": "Account was not saved",
     "security_option": "Säkerhetsalternativ",
     "no_protection": "Inget skydd",
     "no_protection_desc": "Snabb inloggning utan autentisering",
@@ -118,6 +123,7 @@
     },
     "settings": {
       "settings_title": "Inställningar",
+      "disabled_by_admin": "Disabled by admin",
       "log_out_button": "Logga ut",
       "switch_user": {
         "title": "Switch User",
@@ -178,7 +184,10 @@
         "network_already_added": "Nätverket har redan lagts till",
         "no_wifi_connected": "Inte ansluten till WiFi",
         "permission_denied": "Platstillstånd saknas",
-        "permission_denied_explanation": "Platsbehörighet krävs för att upptäcka WiFi-nätverk för automatisk växling. Aktivera det i Inställningar."
+        "permission_denied_explanation": "Platsbehörighet krävs för att upptäcka WiFi-nätverk för automatisk växling. Aktivera det i Inställningar.",
+        "ssid_hidden": "SSID hidden",
+        "location_off_description": "Connected to Wi-Fi, but the network name is hidden. Enable device Location services and grant the app location permission to detect it.",
+        "open_location_settings": "Open Location settings"
       },
       "user_info": {
         "user_info_title": "Användarinformation",
@@ -195,13 +204,21 @@
         "quick_connect_authorized": "Snabbanslutning Godkänd",
         "error": "Fel",
         "invalid_code": "Ogiltig kod",
-        "authorize": "Autentisera"
+        "authorize": "Autentisera",
+        "paste_code": "Paste code"
       },
       "media_controls": {
         "media_controls_title": "Mediakontroller",
         "forward_skip_length": "Framåthoppsintervall",
         "rewind_length": "Bakåthoppsintervall",
         "seconds_unit": "s"
+      },
+      "video_player": {
+        "title": "Video Player",
+        "exoplayer": "ExoPlayer",
+        "mpv": "MPV",
+        "exoplayer_note": "ExoPlayer does not support advanced ASS/SSA subtitle styling or horizontal subtitle alignment. Switch to MPV if you need those.",
+        "mpv_note": "MPV on TV does not currently pass HDR metadata to the display — HDR10/HDR10+ content is tone-mapped to SDR. Switch to ExoPlayer for HDR output."
       },
       "buffer": {
         "title": "Bufferinställningar",
@@ -274,6 +291,10 @@
         "mpv_subtitle_margin_y": "Vertikal marginal",
         "mpv_subtitle_align_x": "Horisontell justering",
         "mpv_subtitle_align_y": "Vertikal justering",
+        "mpv_settings_title": "MPV Subtitle Settings",
+        "mpv_settings_description": "Advanced subtitle customization for MPV player",
+        "opaque_background": "Opaque Background",
+        "background_opacity": "Background Opacity",
         "align": {
           "left": "Vänster",
           "center": "Mitten",
@@ -375,6 +396,7 @@
           "toasts": {
             "saved": "Sparad",
             "refreshed": "Inställningar uppdaterades från servern",
+            "refresh_failed": "Couldn't refresh settings from server",
             "disabled": "Streamystats inaktiverad"
           },
           "refresh_from_server": "Uppdatera inställningar från server"
@@ -415,7 +437,9 @@
         "click_for_more_info": "Klicka för mer Information",
         "level": "Nivå",
         "no_logs_available": "Inga Loggar Tillgängliga",
-        "delete_all_logs": "Ta Bort Alla Loggar"
+        "delete_all_logs": "Ta Bort Alla Loggar",
+        "copy": "Copy",
+        "copied": "Copied to clipboard"
       },
       "languages": {
         "title": "Språk",
@@ -442,10 +466,13 @@
     },
     "sessions": {
       "title": "Sessioner",
-      "no_active_sessions": "Inga Aktiva Sessioner"
+      "no_active_sessions": "Inga Aktiva Sessioner",
+      "select_session": "Select Session",
+      "now_playing": "Now playing:"
     },
     "downloads": {
       "downloads_title": "Nedladdningar",
+      "transcoding": "Transcoding",
       "series": "TV-Serier",
       "movies": "Filmer",
       "other_media": "Annan media",
@@ -501,6 +528,8 @@
     "none": "Ingen",
     "track": "Spår",
     "cancel": "Avbryt",
+    "stop": "Stop",
+    "open_menu": "Open Menu",
     "delete": "Ta bort",
     "ok": "OK",
     "remove": "Radera",
@@ -602,6 +631,19 @@
   },
   "player": {
     "live": "LIVE",
+    "shuffle": "Blanda",
+    "entire_series": "Hela serien",
+    "episode_count": "{{count}} avsnitt",
+    "menu": {
+      "quality": "Quality",
+      "subtitles": "Subtitles",
+      "subtitle_scale": "Subtitle Scale",
+      "audio": "Audio",
+      "speed": "Speed",
+      "playback_options": "Playback Options",
+      "show_technical_info": "Show Technical Info",
+      "hide_technical_info": "Hide Technical Info"
+    },
     "technical_info": {
       "video": "Video:",
       "audio": "Ljud:",
@@ -613,10 +655,11 @@
       "dropped_frames": "Tappade: {{count}} bildrutor",
       "loading": "Läser in..."
     },
-    "shuffle": "Blanda",
-    "entire_series": "Hela serien",
-    "episode_count": "{{count}} avsnitt",
     "mpv_player_title": "MPV Player",
+    "aspect_ratio": "Aspect Ratio",
+    "aspect_ratio_original": "Original",
+    "hash_match": "Hash Match",
+    "still_watching": "Are you still watching?",
     "error": "Fel",
     "failed_to_get_stream_url": "Kunde inte hämta stream-URL",
     "an_error_occurred_while_playing_the_video": "Ett fel uppstod vid uppspelning av videon. Kontrollera loggarna i inställningarna.",
@@ -716,6 +759,7 @@
     "no_data_available": "No data available"
   },
   "live_tv": {
+    "title": "Live TV",
     "next": "Nästa",
     "previous": "Föregående",
     "coming_soon": "Kommer Snart",
@@ -787,7 +831,7 @@
     "request_selected": "Begär valda",
     "n_selected": "{{count}} valda",
     "toasts": {
-      "jellyseer_does_not_meet_requirements": "Seerr-servern uppfyller inte minimikrav för version! Vänligen uppdatera till minst 2.0.0",
+      "jellyseerr_does_not_meet_requirements": "Seerr server does not meet minimum version requirements! Please update to at least 2.0.0",
       "jellyseerr_test_failed": "Seerr test misslyckades. Försök igen.",
       "failed_to_test_jellyseerr_server_url": "Det gick inte att testa Seerr server-adressen",
       "issue_submitted": "Ärende Skickat!",
@@ -800,6 +844,16 @@
       "failed_to_decline_request": "Misslyckades med att avvisa begäran"
     }
   },
+  "accessibility": {
+    "play_button": "Play button",
+    "play_hint": "Tap to play the media",
+    "toggle_orientation": "Toggle screen orientation",
+    "toggle_orientation_hint": "Toggles the screen orientation between portrait and landscape"
+  },
+  "not_found": {
+    "title": "This screen doesn't exist.",
+    "go_home": "Go to home screen!"
+  },
   "tabs": {
     "home": "Hem",
     "search": "Sök",
@@ -810,6 +864,12 @@
   },
   "music": {
     "title": "Musik",
+    "no_track_playing": "No track playing",
+    "queue_empty": "Queue is empty",
+    "playing_from_queue": "Playing from queue",
+    "up_next": "Up next",
+    "now_playing": "Now Playing",
+    "missing_library_id": "Missing music library id.",
     "tabs": {
       "suggestions": "Förslag",
       "albums": "Album",

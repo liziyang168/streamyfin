@@ -6,12 +6,15 @@
     "login_to_title": "Accedi a",
     "select_user": "Seleziona un utente per accedere",
     "add_user_to_login": "Aggiungi un utente per accedere",
-    "add_user": "Add User",
+    "add_user": "Aggiungi utente",
     "username_placeholder": "Nome utente",
     "password_placeholder": "Password",
     "login_button": "Accedi",
     "quick_connect": "Connessione Rapida",
     "enter_code_to_login": "Inserire {{code}} per accedere",
+    "quick_connect_instructions": "Inserisci questo codice su un dispositivo già autenticato — l'accesso sarà automatico.",
+    "tap_code_to_copy": "Tocca il codice per copiarlo",
+    "code_copied": "Codice copiato",
     "failed_to_initiate_quick_connect": "Impossibile avviare la Connessione Rapida",
     "got_it": "Capito",
     "connection_failed": "Connessione fallita",
@@ -31,32 +34,34 @@
     "enter_url_to_jellyfin_server": "Inserisci l'URL del tuo server Jellyfin",
     "server_url_placeholder": "http(s)://tuo-server.com",
     "connect_button": "Connetti",
-    "previous_servers": "server precedente",
+    "previous_servers": "Server precedenti",
     "clear_button": "Cancella",
+    "server_url": "URL del Server",
     "swipe_to_remove": "Scorri per rimuovere",
     "search_for_local_servers": "Ricerca dei server locali",
-    "searching": "Cercando...",
+    "searching": "Ricerca in corso...",
     "servers": "Server",
     "saved": "Salvato",
-    "session_expired": "Session Expired",
+    "session_expired": "Sessione scaduta",
     "please_login_again": "La tua sessione è scaduta. Si prega di eseguire nuovamente l'accesso.",
-    "remove_saved_login": "Remove Saved Login",
+    "remove_saved_login": "Rimuovi login salvato",
     "remove_saved_login_description": "Questo rimuoverà le tue credenziali salvate per questo server. Dovrai inserire nuovamente il tuo nome utente e la password la prossima volta.",
     "accounts_count": "Account {{count}}",
-    "select_account": "Select Account",
-    "add_account": "Add Account",
+    "select_account": "Seleziona account",
+    "add_account": "Aggiungi account",
     "remove_account_description": "Questo rimuoverà le credenziali salvate per {{username}}.",
-    "remove_server": "Remove Server",
-    "remove_server_description": "Questo rimuoverà {{server}} e tutti gli account salvati dall'elenco.",
-    "select_your_server": "Select Your Server",
+    "remove_server": "Rimuovi il server",
+    "remove_server_description": "Questo rimuoverà il {{server}} e tutti i profili salvati dall'elenco.",
+    "select_your_server": "Seleziona il tuo server",
     "add_server_to_get_started": "Aggiungi un server per iniziare",
-    "add_server": "Add Server",
-    "change_server": "Change Server"
+    "add_server": "Aggiungi server",
+    "change_server": "Cambia Server"
   },
   "save_account": {
-    "title": "Save Account",
+    "title": "Salva account",
     "save_for_later": "Salva questo account",
-    "security_option": "Security Option",
+    "not_saved": "L'account non è stato salvato",
+    "security_option": "Opzioni di Sicurezza",
     "no_protection": "Nessuna Protezione",
     "no_protection_desc": "Accesso rapido senza autenticazione",
     "pin_code": "Codice PIN",
@@ -93,7 +98,7 @@
     "server_unreachable": "Server Non Raggiunto",
     "server_unreachable_message": "Impossibile raggiungere il server.\nSi prega di controllare la connessione di rete.",
     "oops": "Ops!",
-    "error_message": "Qualcosa è andato storto. \nEffetturare il logout e riaccedere.",
+    "error_message": "Qualcosa è andato storto. \nDisconnettersi e riaccedere.",
     "continue_watching": "Continua a guardare",
     "continue": "Continua",
     "next_up": "Prossimo",
@@ -118,6 +123,7 @@
     },
     "settings": {
       "settings_title": "Impostazioni",
+      "disabled_by_admin": "Disattivato dall'amministratore",
       "log_out_button": "Esci",
       "switch_user": {
         "title": "Switch User",
@@ -136,12 +142,12 @@
       },
       "appearance": {
         "title": "Aspetto",
-        "merge_next_up_continue_watching": "Merge Continue Watching & Next Up",
-        "merge_next_up_continue_watching_hint": "Combine Continue Watching and Next Up into a single home row.",
-        "use_episode_images_next_up": "Use episode images for Next Up & Continue Watching",
-        "use_episode_images_next_up_hint": "Show each episode's own thumbnail in the Next Up and Continue Watching rows instead of the series image.",
+        "merge_next_up_continue_watching": "Unisci Continua a guardare e Prossimo",
+        "merge_next_up_continue_watching_hint": "Combina Continua a guardare e Prossimo in una singola riga.",
+        "use_episode_images_next_up": "Usa le immagini degli episodi per Prossimo e Continua a guardare",
+        "use_episode_images_next_up_hint": "Mostra la miniatura di ogni episodio invece che l'immagine della serie nelle righe Prossimo e Continua a guardare.",
         "hide_remote_session_button": "Hide Remote Session Button",
-        "hide_remote_session_button_hint": "Hide the remote-sessions button from the home header.",
+        "hide_remote_session_button_hint": "Nascondi il pulsante sessioni remote dall'intestazione.",
         "show_home_backdrop": "Dynamic Home Backdrop",
         "show_hero_carousel": "Hero Carousel",
         "show_series_poster_on_episode": "Show Series Poster on Episodes",
@@ -178,7 +184,10 @@
         "network_already_added": "Rete già inserita",
         "no_wifi_connected": "Not connected to WiFi",
         "permission_denied": "Autorizzazione alla posizione negata",
-        "permission_denied_explanation": "Location permission is required to detect WiFi network for auto-switching. Please enable it in Settings."
+        "permission_denied_explanation": "Location permission is required to detect WiFi network for auto-switching. Please enable it in Settings.",
+        "ssid_hidden": "SSID nascosto",
+        "location_off_description": "Connesso al Wi-Fi, ma il nome della rete è nascosto. Abilita i servizi di localizzazione del dispositivo e concedi all'app l'autorizzazione alla posizione per rilevarlo.",
+        "open_location_settings": "Apri Impostazioni posizione"
       },
       "user_info": {
         "user_info_title": "Info utente",
@@ -195,13 +204,21 @@
         "quick_connect_authorized": "Connessione Rapida autorizzata",
         "error": "Errore",
         "invalid_code": "Codice invalido",
-        "authorize": "Autorizza"
+        "authorize": "Autorizza",
+        "paste_code": "Incolla il codice"
       },
       "media_controls": {
         "media_controls_title": "Controlli multimediali",
         "forward_skip_length": "Lunghezza del salto in avanti",
         "rewind_length": "Lunghezza del riavvolgimento",
         "seconds_unit": "secondi"
+      },
+      "video_player": {
+        "title": "Lettore Video",
+        "exoplayer": "ExoPlayer",
+        "mpv": "MPV",
+        "exoplayer_note": "ExoPlayer non supporta lo styling avanzato dei sottotitoli ASS/SSA o l'allineamento orizzontale dei sottotitoli. Passa a MPV se ne hai bisogno.",
+        "mpv_note": "MPV su TV attualmente non passa i metadati HDR al display — il contenuto HDR10/HDR10+ è stato mappato su SDR. Passa a ExoPlayer per l'uscita HDR."
       },
       "buffer": {
         "title": "Buffer Settings",
@@ -274,6 +291,10 @@
         "mpv_subtitle_margin_y": "Vertical Margin",
         "mpv_subtitle_align_x": "Horizontal Align",
         "mpv_subtitle_align_y": "Vertical Align",
+        "mpv_settings_title": "Impostazioni Sottotitoli MPV",
+        "mpv_settings_description": "Personalizzazione avanzata dei sottotitoli per il lettore MPV",
+        "opaque_background": "Sfondo Opaco",
+        "background_opacity": "Opacità Dello Sfondo",
         "align": {
           "left": "Sinistra",
           "center": "Centro",
@@ -300,7 +321,7 @@
         },
         "safe_area_in_controls": "Area sicura per i controlli",
         "show_custom_menu_links": "Mostra i link del menu personalizzato",
-        "show_custom_menu_links_hint": "Show the custom links your server administrator added in the web config.",
+        "show_custom_menu_links_hint": "Mostra i collegamenti personalizzati aggiunti dall'amministratore del server nella configurazione web.",
         "show_large_home_carousel": "Mostra Carosello Grande nella Home (beta)",
         "hide_libraries": "Nascondi Librerie",
         "select_libraries_you_want_to_hide": "Selezionate le librerie che volete nascondere dalla scheda Libreria e dalle sezioni della pagina iniziale.",
@@ -375,6 +396,7 @@
           "toasts": {
             "saved": "Salvato",
             "refreshed": "Impostazioni aggiornate dal server",
+            "refresh_failed": "Impossibile aggiornare le impostazioni dal server",
             "disabled": "Streamystats disabilitato"
           },
           "refresh_from_server": "Refresh Settings from Server"
@@ -389,8 +411,8 @@
         "device_usage": "Dispositivo {{availableSpace}}%",
         "size_used": "{{used}} di {{total}} usato",
         "delete_all_downloaded_files": "Cancella Tutti i File Scaricati",
-        "delete_all_downloaded_files_confirm": "Delete All Downloaded Files?",
-        "delete_all_downloaded_files_confirm_desc": "Are you sure you want to delete all downloaded files? This action cannot be undone.",
+        "delete_all_downloaded_files_confirm": "Cancellare tutti i file scaricati?",
+        "delete_all_downloaded_files_confirm_desc": "Sei sicuro di voler eliminare tutti i file scaricati? Questa azione non può essere annullata.",
         "music_cache_title": "Music Cache",
         "music_cache_description": "Precarica automaticamente i brani mentre ascolti per una riproduzione più fluida e il supporto offline",
         "clear_music_cache": "Clear Music Cache",
@@ -415,7 +437,9 @@
         "click_for_more_info": "Clicca per maggiori informazioni",
         "level": "Livello",
         "no_logs_available": "Nessun log disponibile",
-        "delete_all_logs": "Cancella tutti i log"
+        "delete_all_logs": "Cancella tutti i log",
+        "copy": "Copia",
+        "copied": "Copiato negli appunti"
       },
       "languages": {
         "title": "Lingue",
@@ -442,10 +466,13 @@
     },
     "sessions": {
       "title": "Sessioni",
-      "no_active_sessions": "Nessuna Sessione Attiva"
+      "no_active_sessions": "Nessuna Sessione Attiva",
+      "select_session": "Seleziona sessione",
+      "now_playing": "In riproduzione:"
     },
     "downloads": {
       "downloads_title": "Scaricati",
+      "transcoding": "Transcodifica in corso",
       "series": "Serie TV",
       "movies": "Film",
       "other_media": "Altri supporti",
@@ -501,6 +528,8 @@
     "none": "Nulla",
     "track": "Traccia",
     "cancel": "Annulla",
+    "stop": "Arresta",
+    "open_menu": "Apri Menu",
     "delete": "Cancella",
     "ok": "OK",
     "remove": "Rimuovi",
@@ -602,7 +631,35 @@
   },
   "player": {
     "live": "IN DIRETTA",
+    "shuffle": "Riproduzione casuale",
+    "entire_series": "Tutta le serie",
+    "episode_count": "{{count}} episodi",
+    "menu": {
+      "quality": "Qualità",
+      "subtitles": "Sottotitoli",
+      "subtitle_scale": "Dimensione sottotitoli",
+      "audio": "Audio",
+      "speed": "Velocità",
+      "playback_options": "Impostazioni di riproduzione",
+      "show_technical_info": "Mostra Informazioni Tecniche",
+      "hide_technical_info": "Nascondi Informazioni Tecniche"
+    },
+    "technical_info": {
+      "video": "Video:",
+      "audio": "Audio:",
+      "subtitle": "Sottotitoli:",
+      "bitrate": "Bitrate:",
+      "source_bitrate": "File:",
+      "buffer_seconds": "Buffer: {{seconds}}s",
+      "vo": "VO:",
+      "dropped_frames": "Persi: {{count}} frame",
+      "loading": "Caricamento in corso..."
+    },
     "mpv_player_title": "MPV Player",
+    "aspect_ratio": "Proporzioni",
+    "aspect_ratio_original": "Originale",
+    "hash_match": "Corrispondenza hash",
+    "still_watching": "Stai ancora guardando?",
     "error": "Errore",
     "failed_to_get_stream_url": "Impossibile ottenere l'URL dello stream",
     "an_error_occurred_while_playing_the_video": "Si è verificato un errore durante la riproduzione del video. Controllare i log nelle impostazioni.",
@@ -702,6 +759,7 @@
     "no_data_available": "Nessun dato disponibile"
   },
   "live_tv": {
+    "title": "TV in diretta",
     "next": "Prossimo",
     "previous": "Precedente",
     "coming_soon": "Prossimamente",
@@ -773,7 +831,7 @@
     "request_selected": "Request Selected",
     "n_selected": "{{count}} selezionati",
     "toasts": {
-      "jellyseer_does_not_meet_requirements": "Il server Jellyseerr non soddisfa i requisiti minimi di versione! Aggiornare almeno alla versione 2.0.0.",
+      "jellyseerr_does_not_meet_requirements": "Il server Seerr non soddisfa i requisiti minimi di versione! Aggiorna almeno alla versione 2.0.0",
       "jellyseerr_test_failed": "Il test di Jellyseerr non è riuscito. Riprovare.",
       "failed_to_test_jellyseerr_server_url": "Fallito il test dell'url del server jellyseerr",
       "issue_submitted": "Problema inviato!",
@@ -786,6 +844,16 @@
       "failed_to_decline_request": "Rifiuto della Richiesta non Riuscito"
     }
   },
+  "accessibility": {
+    "play_button": "Pulsante Play",
+    "play_hint": "Tocca per riprodurre il media",
+    "toggle_orientation": "Commuta l'orientamento dello schermo",
+    "toggle_orientation_hint": "Alterna l'orientamento dello schermo tra verticale e orizzontale"
+  },
+  "not_found": {
+    "title": "Questa schermata non esiste.",
+    "go_home": "Vai alla schermata principale!"
+  },
   "tabs": {
     "home": "Home",
     "search": "Cerca",
@@ -796,6 +864,12 @@
   },
   "music": {
     "title": "Musica",
+    "no_track_playing": "Nessuna traccia in riproduzione",
+    "queue_empty": "La coda è vuota",
+    "playing_from_queue": "In riproduzione dalla coda",
+    "up_next": "Prossimo",
+    "now_playing": "In riproduzione",
+    "missing_library_id": "ID libreria musicale mancante.",
     "tabs": {
       "suggestions": "Suggerimenti",
       "albums": "Album",

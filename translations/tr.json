@@ -12,6 +12,9 @@
     "login_button": "Giriş yap",
     "quick_connect": "Hızlı Bağlan",
     "enter_code_to_login": "Giriş yapmak için {{code}} kodunu girin",
+    "quick_connect_instructions": "Enter this code on a signed-in device — you'll be logged in automatically.",
+    "tap_code_to_copy": "Tap the code to copy it",
+    "code_copied": "Code copied",
     "failed_to_initiate_quick_connect": "Hızlı Bağlan başlatılamadı",
     "got_it": "Anlaşıldı",
     "connection_failed": "Bağlantı başarısız",
@@ -33,6 +36,7 @@
     "connect_button": "Bağlan",
     "previous_servers": "Önceki sunucular",
     "clear_button": "Temizle",
+    "server_url": "Server URL",
     "swipe_to_remove": "Kaldırmak için kaydırın",
     "search_for_local_servers": "Yerel sunucuları ara",
     "searching": "Aranıyor...",
@@ -56,6 +60,7 @@
   "save_account": {
     "title": "Hesabı Kaydet",
     "save_for_later": "Bu hesabı kaydet",
+    "not_saved": "Account was not saved",
     "security_option": "Güvenlik Seçeneği",
     "no_protection": "No protection",
     "no_protection_desc": "Kimlik doğrulamasız hızlı giriş",
@@ -118,6 +123,7 @@
     },
     "settings": {
       "settings_title": "Ayarlar",
+      "disabled_by_admin": "Disabled by admin",
       "log_out_button": "Çıkış Yap",
       "switch_user": {
         "title": "Switch User",
@@ -178,7 +184,10 @@
         "network_already_added": "Ağ zaten eklendi",
         "no_wifi_connected": "WiFi'a bağlı değil",
         "permission_denied": "Konum izni reddedildi",
-        "permission_denied_explanation": "Otomatik geçiş yapabilmek için WiFi ağını algılayabilmek için konum izni gereklidir. Lütfen Ayarlarda etkinleştirin."
+        "permission_denied_explanation": "Otomatik geçiş yapabilmek için WiFi ağını algılayabilmek için konum izni gereklidir. Lütfen Ayarlarda etkinleştirin.",
+        "ssid_hidden": "SSID hidden",
+        "location_off_description": "Connected to Wi-Fi, but the network name is hidden. Enable device Location services and grant the app location permission to detect it.",
+        "open_location_settings": "Open Location settings"
       },
       "user_info": {
         "user_info_title": "Kullanıcı Bilgisi",
@@ -195,13 +204,21 @@
         "quick_connect_authorized": "Hızlı Bağlantı Yetkilendirildi",
         "error": "Hata",
         "invalid_code": "Geçersiz kod",
-        "authorize": "Yetkilendir"
+        "authorize": "Yetkilendir",
+        "paste_code": "Paste code"
       },
       "media_controls": {
         "media_controls_title": "Medya Kontrolleri",
         "forward_skip_length": "İleri Sarma Uzunluğu",
         "rewind_length": "Geri Sarma Uzunluğu",
         "seconds_unit": "sn"
+      },
+      "video_player": {
+        "title": "Video Player",
+        "exoplayer": "ExoPlayer",
+        "mpv": "MPV",
+        "exoplayer_note": "ExoPlayer does not support advanced ASS/SSA subtitle styling or horizontal subtitle alignment. Switch to MPV if you need those.",
+        "mpv_note": "MPV on TV does not currently pass HDR metadata to the display — HDR10/HDR10+ content is tone-mapped to SDR. Switch to ExoPlayer for HDR output."
       },
       "buffer": {
         "title": "Buffer Settings",
@@ -274,6 +291,10 @@
         "mpv_subtitle_margin_y": "Vertical Margin",
         "mpv_subtitle_align_x": "Horizontal Align",
         "mpv_subtitle_align_y": "Vertical Align",
+        "mpv_settings_title": "MPV Subtitle Settings",
+        "mpv_settings_description": "Advanced subtitle customization for MPV player",
+        "opaque_background": "Opaque Background",
+        "background_opacity": "Background Opacity",
         "align": {
           "left": "Left",
           "center": "Center",
@@ -375,6 +396,7 @@
           "toasts": {
             "saved": "Kaydedildi",
             "refreshed": "Ayarlar sunucudan yeniden alındı",
+            "refresh_failed": "Couldn't refresh settings from server",
             "disabled": "Streamystats devre dışı"
           },
           "refresh_from_server": "Ayarları Sunucudan Yeniden Al"
@@ -415,7 +437,9 @@
         "click_for_more_info": "Click for more info",
         "level": "Düzey",
         "no_logs_available": "Günlükler mevcut değil",
-        "delete_all_logs": "Tüm günlükleri sil"
+        "delete_all_logs": "Tüm günlükleri sil",
+        "copy": "Copy",
+        "copied": "Copied to clipboard"
       },
       "languages": {
         "title": "Diller",
@@ -442,10 +466,13 @@
     },
     "sessions": {
       "title": "Oturumlar",
-      "no_active_sessions": "Aktif Oturum Yok"
+      "no_active_sessions": "Aktif Oturum Yok",
+      "select_session": "Select Session",
+      "now_playing": "Now playing:"
     },
     "downloads": {
       "downloads_title": "İndirilenler",
+      "transcoding": "Transcoding",
       "series": "Diziler",
       "movies": "Filmler",
       "other_media": "Diğer medya",
@@ -501,6 +528,8 @@
     "none": "Hiçbiri",
     "track": "Parça",
     "cancel": "Vazgeç",
+    "stop": "Stop",
+    "open_menu": "Open Menu",
     "delete": "Sil",
     "ok": "Tamam",
     "remove": "Kaldır",
@@ -602,7 +631,35 @@
   },
   "player": {
     "live": "LIVE",
+    "shuffle": "Shuffle",
+    "entire_series": "Entire Series",
+    "episode_count": "{{count}} episodes",
+    "menu": {
+      "quality": "Quality",
+      "subtitles": "Subtitles",
+      "subtitle_scale": "Subtitle Scale",
+      "audio": "Audio",
+      "speed": "Speed",
+      "playback_options": "Playback Options",
+      "show_technical_info": "Show Technical Info",
+      "hide_technical_info": "Hide Technical Info"
+    },
+    "technical_info": {
+      "video": "Video:",
+      "audio": "Audio:",
+      "subtitle": "Subtitle:",
+      "bitrate": "Bitrate:",
+      "source_bitrate": "File:",
+      "buffer_seconds": "Buffer: {{seconds}}s",
+      "vo": "VO:",
+      "dropped_frames": "Dropped: {{count}} frames",
+      "loading": "Loading..."
+    },
     "mpv_player_title": "MPV Player",
+    "aspect_ratio": "Aspect Ratio",
+    "aspect_ratio_original": "Original",
+    "hash_match": "Hash Match",
+    "still_watching": "Are you still watching?",
     "error": "Hata",
     "failed_to_get_stream_url": "Yayın URL'si alınamadı",
     "an_error_occurred_while_playing_the_video": "Video oynatılırken bir hata oluştu. Ayarlardaki günlüklere bakın.",
@@ -702,6 +759,7 @@
     "no_data_available": "No data available"
   },
   "live_tv": {
+    "title": "Live TV",
     "next": "Sonraki",
     "previous": "Önceki",
     "coming_soon": "Yakında",
@@ -773,7 +831,7 @@
     "request_selected": "Request Selected",
     "n_selected": "{{count}} selected",
     "toasts": {
-      "jellyseer_does_not_meet_requirements": "Jellyseerr sunucusu minimum sürüm gereksinimlerini karşılamıyor! Lütfen en az 2.0.0 sürümüne güncelleyin",
+      "jellyseerr_does_not_meet_requirements": "Seerr server does not meet minimum version requirements! Please update to at least 2.0.0",
       "jellyseerr_test_failed": "Jellyseerr testi başarısız oldu. Lütfen tekrar deneyin.",
       "failed_to_test_jellyseerr_server_url": "Jellyseerr sunucu URL'si test edilemedi",
       "issue_submitted": "Sorun gönderildi!",
@@ -786,6 +844,16 @@
       "failed_to_decline_request": "İsteği Reddetme Başarısız Oldu"
     }
   },
+  "accessibility": {
+    "play_button": "Play button",
+    "play_hint": "Tap to play the media",
+    "toggle_orientation": "Toggle screen orientation",
+    "toggle_orientation_hint": "Toggles the screen orientation between portrait and landscape"
+  },
+  "not_found": {
+    "title": "This screen doesn't exist.",
+    "go_home": "Go to home screen!"
+  },
   "tabs": {
     "home": "Ana Sayfa",
     "search": "Ara",
@@ -796,6 +864,12 @@
   },
   "music": {
     "title": "Müzik",
+    "no_track_playing": "No track playing",
+    "queue_empty": "Queue is empty",
+    "playing_from_queue": "Playing from queue",
+    "up_next": "Up next",
+    "now_playing": "Now Playing",
+    "missing_library_id": "Missing music library id.",
     "tabs": {
       "suggestions": "Öneriler",
       "albums": "Albümler",

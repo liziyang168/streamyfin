@@ -12,6 +12,9 @@
     "login_button": "Bejelentkezés",
     "quick_connect": "Gyorscsatlakozás",
     "enter_code_to_login": "Írd be a {{code}} kódot a bejelentkezéshez",
+    "quick_connect_instructions": "Enter this code on a signed-in device — you'll be logged in automatically.",
+    "tap_code_to_copy": "Tap the code to copy it",
+    "code_copied": "Code copied",
     "failed_to_initiate_quick_connect": "A Gyorscsatlakozás kezdeményezése sikertelen.",
     "got_it": "Értettem",
     "connection_failed": "Kapcsolódás Sikertelen",
@@ -33,6 +36,7 @@
     "connect_button": "Csatlakozás",
     "previous_servers": "Előző Szerverek",
     "clear_button": "Törlés",
+    "server_url": "Server URL",
     "swipe_to_remove": "Swipe to remove",
     "search_for_local_servers": "Helyi Szerverek Keresése",
     "searching": "Keresés...",
@@ -56,6 +60,7 @@
   "save_account": {
     "title": "Save Account",
     "save_for_later": "Save this account",
+    "not_saved": "Account was not saved",
     "security_option": "Security Option",
     "no_protection": "No protection",
     "no_protection_desc": "Quick login without authentication",
@@ -118,6 +123,7 @@
     },
     "settings": {
       "settings_title": "Beállítások",
+      "disabled_by_admin": "Disabled by admin",
       "log_out_button": "Kijelentkezés",
       "switch_user": {
         "title": "Switch User",
@@ -178,7 +184,10 @@
         "network_already_added": "Network already added",
         "no_wifi_connected": "Not connected to WiFi",
         "permission_denied": "Location permission denied",
-        "permission_denied_explanation": "Location permission is required to detect WiFi network for auto-switching. Please enable it in Settings."
+        "permission_denied_explanation": "Location permission is required to detect WiFi network for auto-switching. Please enable it in Settings.",
+        "ssid_hidden": "SSID hidden",
+        "location_off_description": "Connected to Wi-Fi, but the network name is hidden. Enable device Location services and grant the app location permission to detect it.",
+        "open_location_settings": "Open Location settings"
       },
       "user_info": {
         "user_info_title": "Felhasználói Információk",
@@ -195,13 +204,21 @@
         "quick_connect_authorized": "Gyorscsatlakozás Engedélyezve",
         "error": "Hiba",
         "invalid_code": "Érvénytelen Kód",
-        "authorize": "Engedélyezés"
+        "authorize": "Engedélyezés",
+        "paste_code": "Paste code"
       },
       "media_controls": {
         "media_controls_title": "Médiavezérlés",
         "forward_skip_length": "Előre Ugrás Hossza",
         "rewind_length": "Visszatekerés Hossza",
         "seconds_unit": "mp"
+      },
+      "video_player": {
+        "title": "Video Player",
+        "exoplayer": "ExoPlayer",
+        "mpv": "MPV",
+        "exoplayer_note": "ExoPlayer does not support advanced ASS/SSA subtitle styling or horizontal subtitle alignment. Switch to MPV if you need those.",
+        "mpv_note": "MPV on TV does not currently pass HDR metadata to the display — HDR10/HDR10+ content is tone-mapped to SDR. Switch to ExoPlayer for HDR output."
       },
       "buffer": {
         "title": "Buffer Settings",
@@ -274,6 +291,10 @@
         "mpv_subtitle_margin_y": "Vertical Margin",
         "mpv_subtitle_align_x": "Horizontal Align",
         "mpv_subtitle_align_y": "Vertical Align",
+        "mpv_settings_title": "MPV Subtitle Settings",
+        "mpv_settings_description": "Advanced subtitle customization for MPV player",
+        "opaque_background": "Opaque Background",
+        "background_opacity": "Background Opacity",
         "align": {
           "left": "Left",
           "center": "Center",
@@ -375,6 +396,7 @@
           "toasts": {
             "saved": "Saved",
             "refreshed": "Settings refreshed from server",
+            "refresh_failed": "Couldn't refresh settings from server",
             "disabled": "Streamystats disabled"
           },
           "refresh_from_server": "Refresh Settings from Server"
@@ -415,7 +437,9 @@
         "click_for_more_info": "Kattints a Részletekért",
         "level": "Szint",
         "no_logs_available": "Nincsenek Naplók",
-        "delete_all_logs": "Összes Napló Törlése"
+        "delete_all_logs": "Összes Napló Törlése",
+        "copy": "Copy",
+        "copied": "Copied to clipboard"
       },
       "languages": {
         "title": "Nyelvek",
@@ -442,10 +466,13 @@
     },
     "sessions": {
       "title": "Munkamenetek",
-      "no_active_sessions": "Nincsenek Aktív Munkamenetek"
+      "no_active_sessions": "Nincsenek Aktív Munkamenetek",
+      "select_session": "Select Session",
+      "now_playing": "Now playing:"
     },
     "downloads": {
       "downloads_title": "Letöltések",
+      "transcoding": "Transcoding",
       "series": "Sorozatok",
       "movies": "Filmek",
       "other_media": "Other media",
@@ -501,6 +528,8 @@
     "none": "None",
     "track": "Track",
     "cancel": "Cancel",
+    "stop": "Stop",
+    "open_menu": "Open Menu",
     "delete": "Delete",
     "ok": "OK",
     "remove": "Remove",
@@ -602,7 +631,35 @@
   },
   "player": {
     "live": "LIVE",
+    "shuffle": "Shuffle",
+    "entire_series": "Entire Series",
+    "episode_count": "{{count}} episodes",
+    "menu": {
+      "quality": "Quality",
+      "subtitles": "Subtitles",
+      "subtitle_scale": "Subtitle Scale",
+      "audio": "Audio",
+      "speed": "Speed",
+      "playback_options": "Playback Options",
+      "show_technical_info": "Show Technical Info",
+      "hide_technical_info": "Hide Technical Info"
+    },
+    "technical_info": {
+      "video": "Video:",
+      "audio": "Audio:",
+      "subtitle": "Subtitle:",
+      "bitrate": "Bitrate:",
+      "source_bitrate": "File:",
+      "buffer_seconds": "Buffer: {{seconds}}s",
+      "vo": "VO:",
+      "dropped_frames": "Dropped: {{count}} frames",
+      "loading": "Loading..."
+    },
     "mpv_player_title": "MPV Player",
+    "aspect_ratio": "Aspect Ratio",
+    "aspect_ratio_original": "Original",
+    "hash_match": "Hash Match",
+    "still_watching": "Are you still watching?",
     "error": "Hiba",
     "failed_to_get_stream_url": "Nem sikerült lekérni a stream URL-t",
     "an_error_occurred_while_playing_the_video": "Hiba történt a videó lejátszása közben. Ellenőrizd a naplókat a beállításokban.",
@@ -702,6 +759,7 @@
     "no_data_available": "No data available"
   },
   "live_tv": {
+    "title": "Live TV",
     "next": "Következő",
     "previous": "Előző",
     "coming_soon": "Hamarosan",
@@ -773,7 +831,7 @@
     "request_selected": "Request Selected",
     "n_selected": "{{count}} selected",
     "toasts": {
-      "jellyseer_does_not_meet_requirements": "A Jellyseerr szerver nem felel meg a minimum verziókövetelményeknek! Kérlek frissítsd legalább 2.0.0-ra.",
+      "jellyseerr_does_not_meet_requirements": "Seerr server does not meet minimum version requirements! Please update to at least 2.0.0",
       "jellyseerr_test_failed": "A Jellyseerr teszt sikertelen. Próbáld újra.",
       "failed_to_test_jellyseerr_server_url": "Nem sikerült tesztelni a Jellyseerr szerver URL-jét",
       "issue_submitted": "Probléma Beküldve!",
@@ -786,6 +844,16 @@
       "failed_to_decline_request": "Failed to Decline Request"
     }
   },
+  "accessibility": {
+    "play_button": "Play button",
+    "play_hint": "Tap to play the media",
+    "toggle_orientation": "Toggle screen orientation",
+    "toggle_orientation_hint": "Toggles the screen orientation between portrait and landscape"
+  },
+  "not_found": {
+    "title": "This screen doesn't exist.",
+    "go_home": "Go to home screen!"
+  },
   "tabs": {
     "home": "Kezdőlap",
     "search": "Keresés",
@@ -796,6 +864,12 @@
   },
   "music": {
     "title": "Music",
+    "no_track_playing": "No track playing",
+    "queue_empty": "Queue is empty",
+    "playing_from_queue": "Playing from queue",
+    "up_next": "Up next",
+    "now_playing": "Now Playing",
+    "missing_library_id": "Missing music library id.",
     "tabs": {
       "suggestions": "Suggestions",
       "albums": "Albums",

@@ -12,6 +12,9 @@
     "login_button": "Aanmelden",
     "quick_connect": "Snel Verbinden",
     "enter_code_to_login": "Vul code {{code}} in om aan te melden",
+    "quick_connect_instructions": "Enter this code on a signed-in device — you'll be logged in automatically.",
+    "tap_code_to_copy": "Tap the code to copy it",
+    "code_copied": "Code copied",
     "failed_to_initiate_quick_connect": "Mislukt om Snel Verbinden op te starten",
     "got_it": "Begrepen",
     "connection_failed": "Verbinding mislukt",
@@ -33,6 +36,7 @@
     "connect_button": "Verbinden",
     "previous_servers": "vorige servers",
     "clear_button": "Wissen",
+    "server_url": "Server URL",
     "swipe_to_remove": "Swipe om te verwijderen.",
     "search_for_local_servers": "Zoek naar lokale servers",
     "searching": "Zoeken...",
@@ -56,6 +60,7 @@
   "save_account": {
     "title": "Account opslaan",
     "save_for_later": "Dit account opslaan",
+    "not_saved": "Account was not saved",
     "security_option": "Beveiligingsopties",
     "no_protection": "Geen beveiliging",
     "no_protection_desc": "Snelle login zonder authenticatie",
@@ -118,6 +123,7 @@
     },
     "settings": {
       "settings_title": "Instellingen",
+      "disabled_by_admin": "Disabled by admin",
       "log_out_button": "Afmelden",
       "switch_user": {
         "title": "Switch User",
@@ -178,7 +184,10 @@
         "network_already_added": "Netwerk reeds toegevoegd",
         "no_wifi_connected": "Niet verbonden met Wi-Fi",
         "permission_denied": "Locatie toestemming geweigerd",
-        "permission_denied_explanation": "Locatie permissie is vereist om Wifi-netwerk te kunnen detecteren voor automatisch wisselen. Schakel het in via Instellingen."
+        "permission_denied_explanation": "Locatie permissie is vereist om Wifi-netwerk te kunnen detecteren voor automatisch wisselen. Schakel het in via Instellingen.",
+        "ssid_hidden": "SSID hidden",
+        "location_off_description": "Connected to Wi-Fi, but the network name is hidden. Enable device Location services and grant the app location permission to detect it.",
+        "open_location_settings": "Open Location settings"
       },
       "user_info": {
         "user_info_title": "Gebruiker Info",
@@ -195,13 +204,21 @@
         "quick_connect_authorized": "Snel Verbinden toegestaan",
         "error": "Fout",
         "invalid_code": "Ongeldige code",
-        "authorize": "Toestaan"
+        "authorize": "Toestaan",
+        "paste_code": "Paste code"
       },
       "media_controls": {
         "media_controls_title": "Media Bedieningen",
         "forward_skip_length": "Duur voorwaarts overslaan",
         "rewind_length": "Duur terugspoelen",
         "seconds_unit": "s"
+      },
+      "video_player": {
+        "title": "Video Player",
+        "exoplayer": "ExoPlayer",
+        "mpv": "MPV",
+        "exoplayer_note": "ExoPlayer does not support advanced ASS/SSA subtitle styling or horizontal subtitle alignment. Switch to MPV if you need those.",
+        "mpv_note": "MPV on TV does not currently pass HDR metadata to the display — HDR10/HDR10+ content is tone-mapped to SDR. Switch to ExoPlayer for HDR output."
       },
       "buffer": {
         "title": "Buffer Settings",
@@ -274,6 +291,10 @@
         "mpv_subtitle_margin_y": "Vertical Margin",
         "mpv_subtitle_align_x": "Horizontal Align",
         "mpv_subtitle_align_y": "Vertical Align",
+        "mpv_settings_title": "MPV Subtitle Settings",
+        "mpv_settings_description": "Advanced subtitle customization for MPV player",
+        "opaque_background": "Opaque Background",
+        "background_opacity": "Background Opacity",
         "align": {
           "left": "Left",
           "center": "Center",
@@ -375,6 +396,7 @@
           "toasts": {
             "saved": "Opgeslagen",
             "refreshed": "Settings refreshed from server",
+            "refresh_failed": "Couldn't refresh settings from server",
             "disabled": "Streamystats uitgeschakeld"
           },
           "refresh_from_server": "Refresh Settings from Server"
@@ -415,7 +437,9 @@
         "click_for_more_info": "Klik voor meer info",
         "level": "Niveau",
         "no_logs_available": "Geen logs beschikbaar",
-        "delete_all_logs": "Alle logs verwijderen"
+        "delete_all_logs": "Alle logs verwijderen",
+        "copy": "Copy",
+        "copied": "Copied to clipboard"
       },
       "languages": {
         "title": "Talen",
@@ -442,10 +466,13 @@
     },
     "sessions": {
       "title": "Sessies",
-      "no_active_sessions": "Geen actieve sessies"
+      "no_active_sessions": "Geen actieve sessies",
+      "select_session": "Select Session",
+      "now_playing": "Now playing:"
     },
     "downloads": {
       "downloads_title": "Downloads",
+      "transcoding": "Transcoding",
       "series": "Series",
       "movies": "Films",
       "other_media": "Andere media",
@@ -501,6 +528,8 @@
     "none": "Geen",
     "track": "Spoor",
     "cancel": "Annuleren",
+    "stop": "Stop",
+    "open_menu": "Open Menu",
     "delete": "Verwijderen",
     "ok": "Oké",
     "remove": "Verwijderen",
@@ -602,7 +631,35 @@
   },
   "player": {
     "live": "LIVE",
+    "shuffle": "Shuffle",
+    "entire_series": "Entire Series",
+    "episode_count": "{{count}} episodes",
+    "menu": {
+      "quality": "Quality",
+      "subtitles": "Subtitles",
+      "subtitle_scale": "Subtitle Scale",
+      "audio": "Audio",
+      "speed": "Speed",
+      "playback_options": "Playback Options",
+      "show_technical_info": "Show Technical Info",
+      "hide_technical_info": "Hide Technical Info"
+    },
+    "technical_info": {
+      "video": "Video:",
+      "audio": "Audio:",
+      "subtitle": "Subtitle:",
+      "bitrate": "Bitrate:",
+      "source_bitrate": "File:",
+      "buffer_seconds": "Buffer: {{seconds}}s",
+      "vo": "VO:",
+      "dropped_frames": "Dropped: {{count}} frames",
+      "loading": "Loading..."
+    },
     "mpv_player_title": "MPV Player",
+    "aspect_ratio": "Aspect Ratio",
+    "aspect_ratio_original": "Original",
+    "hash_match": "Hash Match",
+    "still_watching": "Are you still watching?",
     "error": "Fout",
     "failed_to_get_stream_url": "De stream-URL kon niet worden verkregen",
     "an_error_occurred_while_playing_the_video": "Er is een fout opgetreden tijdens het afspelen van de video. Controleer de logs in de instellingen.",
@@ -702,6 +759,7 @@
     "no_data_available": "No data available"
   },
   "live_tv": {
+    "title": "Live TV",
     "next": "Volgende ",
     "previous": "Vorige",
     "coming_soon": "Binnenkort beschikbaar",
@@ -773,7 +831,7 @@
     "request_selected": "Request Selected",
     "n_selected": "{{count}} selected",
     "toasts": {
-      "jellyseer_does_not_meet_requirements": "Jellyseerr server voldoet niet aan de minimale versievereisten! Update naar minimaal 2.0.0",
+      "jellyseerr_does_not_meet_requirements": "Seerr server does not meet minimum version requirements! Please update to at least 2.0.0",
       "jellyseerr_test_failed": "Jellyseerr test mislukt. Probeer opnieuw.",
       "failed_to_test_jellyseerr_server_url": "Mislukt bij het testen van jellyseerr server url",
       "issue_submitted": "Probleem ingediend!",
@@ -786,6 +844,16 @@
       "failed_to_decline_request": "Aanvraag weigeren mislukt"
     }
   },
+  "accessibility": {
+    "play_button": "Play button",
+    "play_hint": "Tap to play the media",
+    "toggle_orientation": "Toggle screen orientation",
+    "toggle_orientation_hint": "Toggles the screen orientation between portrait and landscape"
+  },
+  "not_found": {
+    "title": "This screen doesn't exist.",
+    "go_home": "Go to home screen!"
+  },
   "tabs": {
     "home": "Thuis",
     "search": "Zoeken",
@@ -796,6 +864,12 @@
   },
   "music": {
     "title": "Muziek",
+    "no_track_playing": "No track playing",
+    "queue_empty": "Queue is empty",
+    "playing_from_queue": "Playing from queue",
+    "up_next": "Up next",
+    "now_playing": "Now Playing",
+    "missing_library_id": "Missing music library id.",
     "tabs": {
       "suggestions": "Suggesties",
       "albums": "Albums",

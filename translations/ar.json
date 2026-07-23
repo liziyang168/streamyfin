@@ -12,6 +12,9 @@
     "login_button": "تسجيل الدخول",
     "quick_connect": "الدخول السريع",
     "enter_code_to_login": "أدخل الرمز {{code}} لتسجيل الدخول",
+    "quick_connect_instructions": "Enter this code on a signed-in device — you'll be logged in automatically.",
+    "tap_code_to_copy": "Tap the code to copy it",
+    "code_copied": "Code copied",
     "failed_to_initiate_quick_connect": "فشل في بدء الدخول السريع",
     "got_it": "حسنًا",
     "connection_failed": "فشل الاتصال",
@@ -33,6 +36,7 @@
     "connect_button": "اتصل",
     "previous_servers": "الخوادم السابقة",
     "clear_button": "مسح",
+    "server_url": "Server URL",
     "swipe_to_remove": "مرر للإزالة",
     "search_for_local_servers": "البحث عن الخوادم المحلية",
     "searching": "جاري البحث...",
@@ -56,6 +60,7 @@
   "save_account": {
     "title": "حفظ الحساب",
     "save_for_later": "حفظ هذا الحساب",
+    "not_saved": "Account was not saved",
     "security_option": "‮خيارات الأمان",
     "no_protection": "بدون حماية",
     "no_protection_desc": "تسجيل دخول سريع بدون مصادقة",
@@ -118,6 +123,7 @@
     },
     "settings": {
       "settings_title": "الإعدادات",
+      "disabled_by_admin": "Disabled by admin",
       "log_out_button": "تسجيل الخروج",
       "switch_user": {
         "title": "Switch User",
@@ -178,7 +184,10 @@
         "network_already_added": "الشبكة مضافة مسبقاً",
         "no_wifi_connected": "غير متصل بشبكة WiFi",
         "permission_denied": "تم رفض إذن الوصول إلى الموقع",
-        "permission_denied_explanation": "يتطلب التعرف على شبكة WiFi للتبديل التلقائي الحصول على إذن الوصول إلى الموقع. يرجى تفعيله من الإعدادات."
+        "permission_denied_explanation": "يتطلب التعرف على شبكة WiFi للتبديل التلقائي الحصول على إذن الوصول إلى الموقع. يرجى تفعيله من الإعدادات.",
+        "ssid_hidden": "SSID hidden",
+        "location_off_description": "Connected to Wi-Fi, but the network name is hidden. Enable device Location services and grant the app location permission to detect it.",
+        "open_location_settings": "Open Location settings"
       },
       "user_info": {
         "user_info_title": "معلومات المستخدم",
@@ -195,13 +204,21 @@
         "quick_connect_authorized": "تم تفويض الدخول السريع",
         "error": "خطأ",
         "invalid_code": "رمز غير صالح",
-        "authorize": "تفويض"
+        "authorize": "تفويض",
+        "paste_code": "Paste code"
       },
       "media_controls": {
         "media_controls_title": "عناصر التحكم بالوسائط",
         "forward_skip_length": "مدة التقديم السريع",
         "rewind_length": "مدة الترجيع",
         "seconds_unit": "ث"
+      },
+      "video_player": {
+        "title": "Video Player",
+        "exoplayer": "ExoPlayer",
+        "mpv": "MPV",
+        "exoplayer_note": "ExoPlayer does not support advanced ASS/SSA subtitle styling or horizontal subtitle alignment. Switch to MPV if you need those.",
+        "mpv_note": "MPV on TV does not currently pass HDR metadata to the display — HDR10/HDR10+ content is tone-mapped to SDR. Switch to ExoPlayer for HDR output."
       },
       "buffer": {
         "title": "Buffer Settings",
@@ -274,6 +291,10 @@
         "mpv_subtitle_margin_y": "Vertical Margin",
         "mpv_subtitle_align_x": "Horizontal Align",
         "mpv_subtitle_align_y": "Vertical Align",
+        "mpv_settings_title": "MPV Subtitle Settings",
+        "mpv_settings_description": "Advanced subtitle customization for MPV player",
+        "opaque_background": "Opaque Background",
+        "background_opacity": "Background Opacity",
         "align": {
           "left": "Left",
           "center": "Center",
@@ -375,6 +396,7 @@
           "toasts": {
             "saved": "تم الحفظ",
             "refreshed": "تم تحديث الإعدادات من الخادم",
+            "refresh_failed": "Couldn't refresh settings from server",
             "disabled": "تم تعطيل Streamystats"
           },
           "refresh_from_server": "تحديث الإعدادات من الخادم"
@@ -415,7 +437,9 @@
         "click_for_more_info": "اضغط للمزيد من المعلومات",
         "level": "المستوى",
         "no_logs_available": "لا توجد سجلات متاحة",
-        "delete_all_logs": "حذف جميع السجلات"
+        "delete_all_logs": "حذف جميع السجلات",
+        "copy": "Copy",
+        "copied": "Copied to clipboard"
       },
       "languages": {
         "title": "اللغات",
@@ -442,10 +466,13 @@
     },
     "sessions": {
       "title": "الجلسات",
-      "no_active_sessions": "لا توجد جلسات نشطة"
+      "no_active_sessions": "لا توجد جلسات نشطة",
+      "select_session": "Select Session",
+      "now_playing": "Now playing:"
     },
     "downloads": {
       "downloads_title": "التنزيلات",
+      "transcoding": "Transcoding",
       "series": "مسلسلات",
       "movies": "أفلام",
       "other_media": "وسائط أخرى",
@@ -501,6 +528,8 @@
     "none": "لا شيء",
     "track": "أغنية",
     "cancel": "إلغاء",
+    "stop": "Stop",
+    "open_menu": "Open Menu",
     "delete": "حذف",
     "ok": "حسناً",
     "remove": "إزالة",
@@ -602,7 +631,35 @@
   },
   "player": {
     "live": "LIVE",
+    "shuffle": "Shuffle",
+    "entire_series": "Entire Series",
+    "episode_count": "{{count}} episodes",
+    "menu": {
+      "quality": "Quality",
+      "subtitles": "Subtitles",
+      "subtitle_scale": "Subtitle Scale",
+      "audio": "Audio",
+      "speed": "Speed",
+      "playback_options": "Playback Options",
+      "show_technical_info": "Show Technical Info",
+      "hide_technical_info": "Hide Technical Info"
+    },
+    "technical_info": {
+      "video": "Video:",
+      "audio": "Audio:",
+      "subtitle": "Subtitle:",
+      "bitrate": "Bitrate:",
+      "source_bitrate": "File:",
+      "buffer_seconds": "Buffer: {{seconds}}s",
+      "vo": "VO:",
+      "dropped_frames": "Dropped: {{count}} frames",
+      "loading": "Loading..."
+    },
     "mpv_player_title": "MPV Player",
+    "aspect_ratio": "Aspect Ratio",
+    "aspect_ratio_original": "Original",
+    "hash_match": "Hash Match",
+    "still_watching": "Are you still watching?",
     "error": "خطأ",
     "failed_to_get_stream_url": "فشل في الحصول على رابط البث",
     "an_error_occurred_while_playing_the_video": "حدث خطأ أثناء تشغيل الفيديو. تحقق من السجلات في الإعدادات.",
@@ -702,6 +759,7 @@
     "no_data_available": "No data available"
   },
   "live_tv": {
+    "title": "Live TV",
     "next": "التالي",
     "previous": "السابق",
     "coming_soon": "قريبًا",
@@ -773,7 +831,7 @@
     "request_selected": "Request Selected",
     "n_selected": "{{count}} selected",
     "toasts": {
-      "jellyseer_does_not_meet_requirements": "خادم Seerr لا يستوفي الحد الأدنى للإصدار المطلوب! يرجى التحديث إلى إصدار 2.0.0 على الأقل",
+      "jellyseerr_does_not_meet_requirements": "Seerr server does not meet minimum version requirements! Please update to at least 2.0.0",
       "jellyseerr_test_failed": "فشل اختبار Seerr. يرجى المحاولة مرة أخرى.",
       "failed_to_test_jellyseerr_server_url": "فشل اختبار رابط خادم Seerr",
       "issue_submitted": "تم إرسال المشكلة!",
@@ -786,6 +844,16 @@
       "failed_to_decline_request": "فشل في رفض الطلب"
     }
   },
+  "accessibility": {
+    "play_button": "Play button",
+    "play_hint": "Tap to play the media",
+    "toggle_orientation": "Toggle screen orientation",
+    "toggle_orientation_hint": "Toggles the screen orientation between portrait and landscape"
+  },
+  "not_found": {
+    "title": "This screen doesn't exist.",
+    "go_home": "Go to home screen!"
+  },
   "tabs": {
     "home": "الرئيسية",
     "search": "بحث",
@@ -796,6 +864,12 @@
   },
   "music": {
     "title": "الموسيقى",
+    "no_track_playing": "No track playing",
+    "queue_empty": "Queue is empty",
+    "playing_from_queue": "Playing from queue",
+    "up_next": "Up next",
+    "now_playing": "Now Playing",
+    "missing_library_id": "Missing music library id.",
     "tabs": {
       "suggestions": "الإقتراحات",
       "albums": "الألبومات",
